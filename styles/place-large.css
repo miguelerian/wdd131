@@ -1,0 +1,34 @@
+@media (min-width: 900px) {
+
+    .hero {
+        position: relative;
+    }
+
+    .hero picture img {
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    .card {
+        position: absolute;
+        width: 280px;
+    }
+
+    .data {
+        top: 20%;
+        left: 5%;
+    }
+
+    .weather {
+        top: 25%;
+        right: 5%;
+    }
+
+    .weather h2::after {
+        content: " ⛅";
+    }
+
+    .weather-icon {
+        display: none;
+    }
+}

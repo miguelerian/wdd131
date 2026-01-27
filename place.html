@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Avalos">
+    <meta name="description" content="Country information page for Italy">
+    <title>Italy</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Italy</h1>
+    </header>
+
+    <main>
+        <section class="hero">
+
+            <picture>
+                <source srcset="images/hero-large.webp" media="(min-width: 900px)">
+                <img src="images/hero-small.webp" alt="Landscape of Italy" loading="lazy">
+            </picture>
+
+            <section class="card data">
+                <h2>Data</h2>
+                <p><strong>Area:</strong> 301,340 sq km</p>
+                <p><strong>Population:</strong> 58,870,762</p>
+                <p><strong>Capital:</strong> Rome</p>
+                <p><strong>Languages:</strong> Italian</p>
+                <p><strong>Currency:</strong> Euro (€)</p>
+                <p><strong>Time Zone:</strong> UTC+1</p>
+                <p><strong>Calling Code:</strong> +39</p>
+                <p><strong>Internet TLD:</strong> .it</p>
+            </section>
+
+            <section class="card weather">
+                <h2>Weather</h2>
+
+                <img src="images/weather.svg" alt="Partly cloudy" class="weather-icon">
+
+                <p><strong>Temperature:</strong> <span id="temp">8</span> °C</p>
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Wind:</strong> <span id="wind">10</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="windchill"></span></p>
+            </section>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> | Miguel Avalos | Italy</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </footer>
+
+</body>
+
+</html>
