@@ -1,5 +1,5 @@
 /* Typing effect */
-const text = "Mariana, ¿Quieres ser mi San Valentín?";
+const text = "Checate este volovan...";
 const typeTarget = document.getElementById("typeText");
 let index = 0;
 
