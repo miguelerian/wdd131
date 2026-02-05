@@ -1,0 +1,143 @@
+/* Reset & mobile safety */
+* {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    width: 90%;
+    max-width: 360px;
+    padding: 28px 22px 32px;
+    border-radius: 24px;
+    text-align: center;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #e63946;
+    font-size: 24px;
+    min-height: 56px;
+    margin-bottom: 12px;
+}
+
+p {
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.heart {
+    font-size: 44px;
+    animation: pulse 1.5s infinite;
+    margin-bottom: 8px;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Buttons */
+.buttons {
+    position: relative;
+    height: 90px;
+}
+
+button {
+    font-size: 16px;
+    padding: 14px 26px;
+    border-radius: 28px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+.yes {
+    background: #e63946;
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+}
+
+.no {
+    background: #eee;
+    color: #333;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+/* Success screen */
+.success {
+    position: fixed;
+    inset: 0;
+    background: radial-gradient(circle, #ff7eb3, #ff758c);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    overflow: hidden;
+}
+
+.success-content {
+    padding: 20px;
+}
+
+.success h1 {
+    font-size: 36px;
+}
+
+.success p {
+    font-size: 18px;
+}
+
+.big-hearts {
+    font-size: 60px;
+    margin-top: 18px;
+}
+
+/* Confetti */
+.confetti-heart {
+    position: absolute;
+    top: -40px;
+    pointer-events: none;
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
