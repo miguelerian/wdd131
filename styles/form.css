@@ -1,0 +1,100 @@
+:root {
+    --primary: #2a9d8f;
+    --accent: #264653;
+    --light: #f4f4f4;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: var(--light);
+    color: var(--accent);
+}
+
+header {
+    background-color: var(--primary);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+main {
+    padding: 1rem;
+    max-width: 600px;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 1.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+label,
+legend {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+
+.rating {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.rating input:checked~label {
+    color: gold;
+}
+
+input[type="submit"] {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+    background-color: #ddd;
+    margin-top: 2rem;
+}
+
+.confirmation {
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+    main {
+        max-width: 800px;
+    }
+}
