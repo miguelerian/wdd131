@@ -1,19 +1,21 @@
 :root {
     --primary: #2a9d8f;
-    --accent: #264653;
+    --secondary: #264653;
     --light: #f4f4f4;
+    --white: #ffffff;
+    --border: #cccccc;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: var(--light);
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 header {
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
     padding: 1rem;
     text-align: center;
 }
@@ -25,9 +27,9 @@ main {
 }
 
 .form-group {
-    margin-bottom: 1.2rem;
     display: flex;
     flex-direction: column;
+    margin-bottom: 1.2rem;
 }
 
 label,
@@ -41,11 +43,14 @@ select,
 textarea {
     padding: 0.5rem;
     font-size: 1rem;
+    border: 1px solid var(--border);
+    border-radius: 4px;
 }
 
 fieldset {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     padding: 1rem;
+    border-radius: 4px;
 }
 
 .rating {
@@ -58,33 +63,34 @@ fieldset {
 }
 
 .rating label {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     cursor: pointer;
 }
 
-.rating input:checked~label {
+input[type="radio"]:checked+label {
     color: gold;
 }
 
 input[type="submit"] {
     background-color: var(--primary);
-    color: white;
+    color: var(--white);
     border: none;
     padding: 0.75rem;
-    cursor: pointer;
     font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
 }
 
 input[type="submit"]:hover {
-    background-color: var(--accent);
+    background-color: var(--secondary);
 }
 
 footer {
     text-align: center;
     padding: 1rem;
-    font-size: 0.8rem;
-    background-color: #ddd;
+    font-size: 0.9rem;
     margin-top: 2rem;
+    background-color: var(--border);
 }
 
 .confirmation {

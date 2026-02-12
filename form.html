@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miguel Avalos">
-    <meta name="description" content="Product Review Form">
-    <title>Product Review</title>
+    <meta name="description" content="Complete this form to submit your product review.">
+    <title>Product Review Form</title>
 
     <link rel="stylesheet" href="styles/form.css">
+    <script src="styles/form.css" defer></script>
     <script src="scripts/form.js" defer></script>
 </head>
 
@@ -21,6 +22,7 @@
     <main>
         <form method="get" action="review.html">
 
+            <!-- Product Name -->
             <div class="form-group">
                 <label for="product">Product Name *</label>
                 <select id="product" name="product" required>
@@ -36,16 +38,16 @@
                     <input type="radio" id="star1" name="rating" value="1" required>
                     <label for="star1">☆</label>
 
-                    <input type="radio" id="star2" name="rating" value="2">
+                    <input type="radio" id="star2" name="rating" value="2" required>
                     <label for="star2">☆</label>
 
-                    <input type="radio" id="star3" name="rating" value="3">
+                    <input type="radio" id="star3" name="rating" value="3" required>
                     <label for="star3">☆</label>
 
-                    <input type="radio" id="star4" name="rating" value="4">
+                    <input type="radio" id="star4" name="rating" value="4" required>
                     <label for="star4">☆</label>
 
-                    <input type="radio" id="star5" name="rating" value="5">
+                    <input type="radio" id="star5" name="rating" value="5" required>
                     <label for="star5">☆</label>
                 </div>
             </fieldset>
@@ -70,7 +72,7 @@
                     <input type="checkbox" id="feature3" name="features" value="design">
                     <label for="feature3">Design</label>
 
-                    <input type="checkbox" id="feature4" name="features" value="ease">
+                    <input type="checkbox" id="feature4" name="features" value="ease-of-use">
                     <label for="feature4">Ease of Use</label>
                 </div>
             </fieldset>
@@ -87,7 +89,7 @@
                 <input type="text" id="username" name="username">
             </div>
 
-            <!-- Submit -->
+            <!-- Submit Button -->
             <div class="form-group">
                 <input type="submit" value="Submit Review">
             </div>
@@ -99,11 +101,6 @@
         <p>&copy; <span id="year"></span> | Miguel Avalos</p>
         <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
-
-    <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-        document.getElementById("lastModified").textContent = document.lastModified;
-    </script>
 
 </body>
 

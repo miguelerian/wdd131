@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     reviewCount++;
+
     localStorage.setItem("reviewCount", reviewCount);
 
     document.getElementById("reviewCount").textContent = reviewCount;

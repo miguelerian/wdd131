@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     products.forEach(product => {
         const option = document.createElement("option");
-        option.value = product.id; // id used for value
-        option.textContent = product.name; // name used for display
+        option.value = product.id;
+        option.textContent = product.name;
         productSelect.appendChild(option);
     });
 });
