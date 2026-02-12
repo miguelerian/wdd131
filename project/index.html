@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Avalos">
+    <meta name="description"
+        content="Official website of Taqueria Fat-Fit. Authentic Mexican street tacos made fresh daily.">
+    <title>Taqueria Fat-Fit | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/responsive.css">
+    <script defer src="scripts/main.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo-container">
+            <img src="images/logo.webp" alt="Taquería Fat-Fit official logo" class="logo" loading="lazy">
+        </div>
+
+        <nav>
+            <a href="index.html" class="active">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="hero">
+            <h2 id="greeting"></h2>
+            <p>Authentic Mexican street tacos made fresh every day.</p>
+        </section>
+
+        <section>
+            <h2>Our Story</h2>
+            <p>
+                Founded as a couple-owned taco stand, Taqueria Fat-Fit proudly serves
+                authentic Mexican flavors to the community. Our recipes combine tradition,
+                fresh ingredients, and passion for street food culture.
+            </p>
+        </section>
+
+        <section>
+            <h2>Current Promotions</h2>
+            <div id="promotions"></div>
+        </section>
+
+        <section class="gallery-section">
+            <h2>Happy Customers</h2>
+            <div class="gallery-grid">
+                <img src="images/menu.webp" alt="Taco menu board" loading="lazy">
+                <img src="images/taco1.webp" alt="Gringa de res taco" loading="lazy">
+                <img src="images/taco2.webp" alt="Customers enjoying tacos" loading="lazy">
+                <img src="images/taco3.webp" alt="Fresh tacos served hot" loading="lazy">
+            </div>
+        </section>
+
+        <section>
+            <h2>Select Your Favorite Taco</h2>
+            <select id="favoriteSelect">
+                <option value="">-- Choose a Taco --</option>
+                <option value="Taco al Pastor">Taco al Pastor</option>
+                <option value="Taco de Res">Taco de Res</option>
+                <option value="Taco Campechano">Taco Campechano</option>
+                <option value="Taco de Bistek de Puerco">Taco de Bistek de Puerco</option>
+                <option value="Taco de Salchichon">Taco de Salchichon</option>
+                <option value="Taco de Pollo Asado">Taco de Pollo Asado</option>
+            </select>
+            <p id="favoriteMessage"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Miguel Avalos</p>
+        <a href="references.html">References</a>
+    </footer>
+
+</body>
+
+</html>
