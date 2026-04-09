@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sorpresita</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- 🌑 OVERLAY -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <!-- 🎵 BACKGROUND MUSIC -->
+    <audio id="bgMusic" loop>
+        <source src="Por amarte así - CRISTIAN CASTRO.mp3">
+    </audio>
+
+    <!-- 🔒 LOCK SCREEN -->
+    <div id="lockscreen" class="lockscreen fade">
+        <div class="time" id="lockTime"></div>
+        <div class="notification" onclick="unlock()">
+            💬 Mensaje de MonkeyBf❤️
+            <br> Haz click para abrir.
+        </div>
+    </div>
+
+    <!-- 📱 PHONE -->
+    <div class="phone hidden fade" id="phone">
+
+        <div class="header">MonkeyBf❤️</div>
+
+        <div id="chat"></div>
+
+        <button id="openBtn" class="hidden" onclick="showStory()">Abrir</button>
+
+        <!-- 💌 STORY -->
+        <div id="story" class="hidden fade">
+            <h2>💌</h2>
+            <p>Este año contigo ha sido el mejor de toda mi vida.</p>
+            <p>Me llena de felicidad estar contigo y se que te amo con locura.</p>
+            <p>Quisiera saber si te gustaría…</p>
+            <button onclick="startCall()">Continuar 📞</button>
+        </div>
+
+        <!-- 📞 CALL -->
+        <div id="call" class="hidden call fade">
+            <h2>Llamada de FaceTime…</h2>
+            <p>MonkeyBf❤️</p>
+            <button onclick="acceptCall()">Contestar</button>
+        </div>
+
+        <!-- ⏳ CONNECTING -->
+        <div id="connecting" class="hidden call fade">
+            <h2>Connecting...</h2>
+            <div class="loader"></div>
+        </div>
+
+        <!-- ❤️ QUESTION -->
+        <div id="question" class="hidden fade">
+            <h2>¿Te gustaría tener una cita especial conmigo este sábado? ❤️</h2>
+            <button class="yes" onclick="yesClicked()">Si 💕</button>
+            <button class="no" id="noBtn">No 😢</button>
+            <p id="response"></p>
+        </div>
+
+        <!-- 🎁 SURPRISE -->
+        <div id="secret" class="hidden fade">
+            <h2>🎁 Mi regalo eres tú</h2>
+            <p>Soy tan afortunado de estar contigo ❤️</p>
+            <p>Gracias por este año magnífico, eres mi mayor tesoro.</p>
+
+            <h3>⏳ Falta para nuestro día:</h3>
+            <p id="countdown"></p>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,185 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* 🌑 OVERLAY */
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    z-index: 999;
+}
+
+.overlay.active {
+    animation: unlockFade 1s ease forwards;
+}
+
+@keyframes unlockFade {
+    30% {
+        opacity: 0.6;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* LOCK */
+.lockscreen {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#000, #1c1c1e);
+    color: white;
+}
+
+/* PHONE */
+.phone {
+    width: 350px;
+    height: 650px;
+    margin: 20px auto;
+    border-radius: 35px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #f2f2f7;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* HEADER */
+.header {
+    text-align: center;
+    padding: 12px;
+    background: white;
+}
+
+/* CHAT */
+#chat {
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background: #e5ddd5;
+}
+
+/* MESSAGE */
+.message {
+    padding: 10px;
+    border-radius: 20px;
+    margin: 5px;
+    max-width: 70%;
+    background: #e5e5ea;
+}
+
+/* TYPING */
+.typing {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: gray;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite;
+}
+
+@keyframes bounce {
+    40% {
+        transform: translateY(-5px);
+    }
+}
+
+/* BUTTONS */
+button {
+    margin: 10px;
+    padding: 12px;
+    border-radius: 20px;
+    border: none;
+}
+
+.yes {
+    background: #ff4d6d;
+    color: white;
+}
+
+.no {
+    position: absolute;
+}
+
+/* BACKGROUNDS */
+#story {
+    background: linear-gradient(#ff9a9e, #fad0c4);
+    text-align: center;
+}
+
+.call {
+    background: linear-gradient(#1e3c72, #2a5298);
+    color: white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+#question {
+    background: linear-gradient(#2193b0, #6dd5ed);
+    text-align: center;
+    color: white;
+}
+
+#secret {
+    background: linear-gradient(#ff758c, #ff7eb3);
+    text-align: center;
+    color: white;
+}
+
+/* COUNTDOWN */
+#countdown {
+    font-size: 24px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+/* HEART */
+.heart {
+    position: absolute;
+    animation: float 3s linear;
+}
+
+@keyframes float {
+    to {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+}
+
+/* LOADER */
+.loader {
+    border: 4px solid #ddd;
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* HIDDEN */
+.hidden {
+    display: none;
+}
