@@ -11,9 +11,11 @@ setInterval(() => {
 
 // FADE
 function fadeOut(id) {
-    document.getElementById(id).style.opacity = 0;
-    setTimeout(() => document.getElementById(id).classList.add("hidden"), 500);
+    let el = document.getElementById(id);
+    el.style.opacity = 0;
+    setTimeout(() => el.classList.add("hidden"), 400);
 }
+
 function fadeIn(id) {
     let el = document.getElementById(id);
     el.classList.remove("hidden");
@@ -21,7 +23,7 @@ function fadeIn(id) {
     setTimeout(() => el.style.opacity = 1, 10);
 }
 
-// UNLOCK
+// UNLOCK (FIXED)
 function unlock() {
 
     overlay.classList.remove("hidden");
@@ -31,6 +33,7 @@ function unlock() {
 
         fadeOut("lockscreen");
 
+        // MUSIC FADE IN
         bgMusic.volume = 0;
         bgMusic.play();
 
@@ -48,6 +51,12 @@ function unlock() {
             document.getElementById("phone").classList.remove("hidden");
             showNextMessage();
         }, 500);
+
+        // 🔥 IMPORTANT FIX
+        setTimeout(() => {
+            overlay.classList.remove("active");
+            overlay.classList.add("hidden");
+        }, 900);
 
     }, 300);
 }
@@ -87,19 +96,17 @@ function showNextMessage() {
         }, 1000);
 
     } else {
-        document.getElementById("openBtn").classList.remove("hidden");
+        let btn = document.getElementById("openBtn");
+        btn.classList.remove("hidden");
+        btn.style.opacity = 0;
+        setTimeout(() => btn.style.opacity = 1, 50);
     }
 }
 
-// ✅ FIXED
-function showStory() {
-    document.getElementById("chat").classList.add("hidden");
-    document.getElementById("openBtn").classList.add("hidden");
-    fadeIn("story");
-}
-
 // FLOW
+function showStory() { fadeOut("chat"); setTimeout(() => fadeIn("story"), 400); }
 function startCall() { fadeOut("story"); setTimeout(() => fadeIn("call"), 400); }
+
 function acceptCall() {
     fadeOut("call");
     setTimeout(() => {
@@ -121,6 +128,7 @@ function startCountdown() {
             document.getElementById("countdown").innerText = "Es nuestro día ❤️";
             return;
         }
+
         let d = Math.floor(diff / (1000 * 60 * 60 * 24));
         let h = Math.floor((diff / (1000 * 60 * 60)) % 24);
         let m = Math.floor((diff / (1000 * 60)) % 60);
@@ -129,6 +137,7 @@ function startCountdown() {
         document.getElementById("countdown").innerText =
             `${d}d ${h}h ${m}m ${s}s`;
     }
+
     update();
     setInterval(update, 1000);
 }
@@ -152,9 +161,12 @@ function yesClicked() {
     }, 2000);
 }
 
-// RUNAWAY
+// RUNAWAY BUTTON (SAFE)
 const noBtn = document.getElementById("noBtn");
-noBtn.addEventListener("mouseover", () => {
-    noBtn.style.left = Math.random() * 250 + "px";
-    noBtn.style.top = Math.random() * 500 + "px";
-});
+
+if (noBtn) {
+    noBtn.addEventListener("mouseover", () => {
+        noBtn.style.left = Math.random() * 250 + "px";
+        noBtn.style.top = Math.random() * 500 + "px";
+    });
+}

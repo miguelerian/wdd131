@@ -3,7 +3,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* OVERLAY */
+/* 🌑 OVERLAY (FIXED) */
 .overlay {
     position: fixed;
     width: 100%;
@@ -11,9 +11,12 @@ body {
     background: black;
     opacity: 0;
     z-index: 999;
+    pointer-events: none;
+    /* 🔥 KEY FIX */
 }
 
 .overlay.active {
+    pointer-events: auto;
     animation: unlockFade 1s ease forwards;
 }
 
@@ -33,9 +36,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     background: linear-gradient(#000, #1c1c1e);
     color: white;
-    flex-direction: column;
 }
 
 /* PHONE */
@@ -48,6 +51,7 @@ body {
     display: flex;
     flex-direction: column;
     background: #f2f2f7;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* HEADER */
@@ -55,6 +59,7 @@ body {
     text-align: center;
     padding: 12px;
     background: white;
+    font-weight: bold;
 }
 
 /* CHAT */
@@ -68,11 +73,12 @@ body {
 
 /* MESSAGE */
 .message {
-    padding: 10px;
-    margin: 5px;
+    padding: 10px 14px;
     border-radius: 20px;
-    background: #e5e5ea;
+    margin: 5px;
     max-width: 70%;
+    background: #e5e5ea;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 /* TYPING */
@@ -101,6 +107,29 @@ button {
     padding: 12px;
     border-radius: 20px;
     border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+}
+
+/* GLOW BUTTON */
+.glow {
+    background: #ff4d6d;
+    color: white;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 5px #ff4d6d;
+    }
+
+    to {
+        box-shadow: 0 0 20px #ff4d6d;
+    }
 }
 
 .yes {
