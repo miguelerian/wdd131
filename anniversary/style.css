@@ -3,7 +3,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-/* 🌑 OVERLAY */
+/* OVERLAY */
 .overlay {
     position: fixed;
     width: 100%;
@@ -33,9 +33,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     background: linear-gradient(#000, #1c1c1e);
     color: white;
+    flex-direction: column;
 }
 
 /* PHONE */
@@ -48,7 +48,6 @@ body {
     display: flex;
     flex-direction: column;
     background: #f2f2f7;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
 }
 
 /* HEADER */
@@ -70,10 +69,10 @@ body {
 /* MESSAGE */
 .message {
     padding: 10px;
-    border-radius: 20px;
     margin: 5px;
-    max-width: 70%;
+    border-radius: 20px;
     background: #e5e5ea;
+    max-width: 70%;
 }
 
 /* TYPING */

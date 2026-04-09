@@ -21,7 +21,7 @@ function fadeIn(id) {
     setTimeout(() => el.style.opacity = 1, 10);
 }
 
-// UNLOCK (with animation + music fade)
+// UNLOCK
 function unlock() {
 
     overlay.classList.remove("hidden");
@@ -91,8 +91,14 @@ function showNextMessage() {
     }
 }
 
+// ✅ FIXED
+function showStory() {
+    document.getElementById("chat").classList.add("hidden");
+    document.getElementById("openBtn").classList.add("hidden");
+    fadeIn("story");
+}
+
 // FLOW
-function showStory() { fadeOut("chat"); setTimeout(() => fadeIn("story"), 400); }
 function startCall() { fadeOut("story"); setTimeout(() => fadeIn("call"), 400); }
 function acceptCall() {
     fadeOut("call");
